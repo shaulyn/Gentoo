@@ -1,0 +1,6 @@
+У intel_pstate governor ondemand отсутствует как данность, cpupower frequency-info выдает что дескать intel_pstate пашет в режиме powersave,
+Попробовала сделать в строку ядра intel_pstate=disable, стал грузиться acpi-cpufreq, 
+http://archlinux.org.ru/forum/topic/16734/
+
+чтобы отключить intel pstate нужно передать в параметрах ядра intel_pstate=disable, тогда может загрузиться модуль acpi-cpufreq
+и выбрать другие профили гоновера ondemand, prefomance, powersave
