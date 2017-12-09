@@ -1,0 +1,13 @@
+Чтобы включить scheduler на ядре 4.12.12 нужно
+Включить в ядре:
+CONFIG_SCSI_MQ_DEFAULT=y
+CONFIG_DM_MQ_DEFAULT=y
+или прописать в параметрах загрузки ядра scsi_mod.use_blk_mq=1
+в параметрах загрузки ядра прописать elevator=bfq
+echo bfq > /sys/block/sda/queue/sheduler
+
+Or you can create the file 20-block.rules in /etc/udev/rules.d with the below in it and it will set BFQ as default during boot. 
+ACTION=="add|change", SUBSYSTEM=="block", ATTR{queue/scheduler}="bfq"
+
+https://www.linux.org.ru/forum/admin/13542572
+https://bfq.teambelgium.net/ сайт по настройке
