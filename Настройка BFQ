@@ -11,3 +11,4 @@ ACTION=="add|change", SUBSYSTEM=="block", ATTR{queue/scheduler}="bfq"
 
 https://www.linux.org.ru/forum/admin/13542572
 https://bfq.teambelgium.net/ сайт по настройке
+https://unix.stackexchange.com/questions/375600/how-to-enable-and-use-the-bfq-scheduler соайт по настройке
