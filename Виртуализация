@@ -1,0 +1,7 @@
+virt-install --connect=qemu:///system -n gate -r 2048 --vcpus=2 --import --disk path=/home/gate1.qcow2,format=qcow2,bus=virtio \
+--vnc --noautoconsole --os-type=linux --accelerate --network=bridge:br0,model=virtio --network=bridge:br1,model=virtio
+
+--import – использовать для виртуальной машины имеющийся образ диска;
+
+--disk path=<путь до образа диска> – путь до диска (совместное использование с --import указывает на существующий диск); \
+format=<формат образа>,bus=virtio – обязательные параметры для образов vmdk и qcow2;
