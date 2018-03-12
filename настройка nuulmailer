@@ -1,0 +1,5 @@
+Для того чтобы письма отпрвлялись через smtp яндекса и правильно заполнялось поле FROM нужно чделать глобальные перменные
+root@tuna:~# export NULLMAILER_HOST=yandex.com
+root@tuna:~# export NULLMAILER_USER=shaulyn
+
+ссылка на подробности https://gist.github.com/bbrodriges/2397565
