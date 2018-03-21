@@ -1,0 +1,14 @@
+Для майнинга МОНЕРО через видеокарту с использованием OpenCL нужно установить пакет emerge -av dev-libs/amdgpu-pro-opencl
+через eselect opencl выбрать ocl-icd
+На ошибку Error CL_OUT_OF_HOST_MEMORY when calling clCreateCommandQueueWithProperties.
+нужно выполнить эти команды
+
+export GPU_FORCE_64BIT_PTR=1
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+export GPU_MAX_HEAP_SIZE=100
+
+https://github.com/xmrig/xmrig-amd/issues/32
+https://github.com/fireice-uk/xmr-stak/issues/550
+https://github.com/fireice-uk/xmr-stak/issues/863
