@@ -1,0 +1,2 @@
+xmr-stak -o stratum+tcp://xmr.pool.minergate.com:45560 -u почта -p пароль --noCPU
+cpuminer -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u почта -p пароль -t 7
