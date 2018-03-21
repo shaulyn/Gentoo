@@ -3,6 +3,8 @@
 На ошибку Error CL_OUT_OF_HOST_MEMORY when calling clCreateCommandQueueWithProperties.
 нужно выполнить эти команды
 
+Запуск xmr-stak -o stratum+tcp://xmr.pool.minergate.com:45560 -u почта -p пароль --noCPU
+
 export GPU_FORCE_64BIT_PTR=1
 export GPU_USE_SYNC_OBJECTS=1
 export GPU_MAX_ALLOC_PERCENT=100
