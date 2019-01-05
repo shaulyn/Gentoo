@@ -1,0 +1,19 @@
+1) create a directory, say chrome-fake-bin.
+
+2) In that directory, create a file xdg-mime with the following 2 lines:
+# !/bin/bash
+echo "nautilus.desktop"
+
+3) Also, create a file nautilus with the folowing contents:
+# !/bin/bash
+if [ "$1" = "--version" ]; then
+echo "GNOME nautilus 3.14.3"; else
+dolphin --select $1
+fi
+
+4) Optionally, change dolphin --select above to whatever you wish
+
+5) chmod +x nautilus; chmod +x xdg-mime
+
+6) Prepend "export PATH=/path/to/chrome-fake-bin:$PATH;" to the command that is used to open Google Chrome. In KDE, one can right-click the chrome shortcut, 
+click at "Edit Application", then edit the "Command" field in the "Application" tab
