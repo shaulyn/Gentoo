@@ -8,8 +8,10 @@ echo "nautilus.desktop"
 # !/bin/bash
 if [ "$1" = "--version" ]; then
 echo "GNOME nautilus 3.14.3"; else
-dolphin --select $1
+dolphin --select $1 (либо так, если есть пробелы в названиях файла dolphin --select "$1")
 fi
+
+
 
 4) Optionally, change dolphin --select above to whatever you wish
 
